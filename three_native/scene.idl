@@ -1,0 +1,8 @@
+[
+    Exposed=Window
+] interface Scene : Object3D {    
+    constructor();   
+    
+    attribute Background background;
+   
+};

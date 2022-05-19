@@ -1,0 +1,78 @@
+[
+    Exposed=Window
+] interface Object3D {
+    constructor(); 
+    void dispose();
+    
+    attribute DOMString name;  
+    attribute Object3D parent;  
+    readonly attribute sequence<Object3D> children;
+    Object3D add(Object3D param);
+    Object3D remove(Object3D param);
+    Object3D removeFromParent();
+    Object3D clear();
+    Object3D getObjectByName(DOMString name);
+    
+    [CallWith=ScriptState] readonly attribute any up;
+    [CallWith=ScriptState] void getUp(any up);
+    [CallWith=ScriptState] void setUp(any up);
+    void setUp(double x, double y, double z);
+    
+    [CallWith=ScriptState] readonly attribute any position;
+    [CallWith=ScriptState] void getPosition(any position);
+    [CallWith=ScriptState] void setPosition(any position);
+    void setPosition(double x, double y, double z);
+    
+    [CallWith=ScriptState] readonly attribute any rotation;
+    [CallWith=ScriptState] void getRotation(any rotation);
+    [CallWith=ScriptState] void setRotation(any rotation);
+    void setRotation(double x, double y, double z);
+    
+    [CallWith=ScriptState] readonly attribute any quaternion;
+    [CallWith=ScriptState] void getQuaternion(any quaternion);
+    [CallWith=ScriptState] void setQuaternion(any quaternion);
+    void setQuaternion(double x, double y, double z, double w);
+    
+    [CallWith=ScriptState] readonly attribute any scale;
+    [CallWith=ScriptState] void getScale(any scale);
+    [CallWith=ScriptState] void setScale(any scale);
+    void setScale(double x, double y, double z);
+    
+    [CallWith=ScriptState] readonly attribute any matrix;
+    [CallWith=ScriptState] void getMatrix(any matrix);
+    
+    [CallWith=ScriptState] readonly attribute any matrixWorld;
+    [CallWith=ScriptState] void getMatrixWorld(any matrix);
+    
+    void updateMatrix();
+    void updateMatrixWorld(boolean force);
+    void updateWorldMatrix(boolean updateParents, boolean updateChildren);
+    
+    [CallWith=ScriptState] Object3D applyMatrix4(any matrix);
+    [CallWith=ScriptState] Object3D applyQuaternion(any quat);
+    [CallWith=ScriptState] void setRotationFromAxisAngle(any axis, double angle);
+    [CallWith=ScriptState] void setRotationFromMatrix(any matrix);
+    
+    [CallWith=ScriptState] Object3D rotateOnAxis(any axis, double angle);
+    [CallWith=ScriptState] Object3D rotateOnWorldAxis(any axis, double angle);
+    Object3D rotateX(double angle);
+    Object3D rotateY(double angle);
+    Object3D rotateZ(double angle);
+    
+    [CallWith=ScriptState] Object3D translateOnAxis(any axis, double distance);
+    Object3D translateX(double distance);
+    Object3D translateY(double distance);
+    Object3D translateZ(double distance);
+    
+    [CallWith=ScriptState] any localToWorld(any vector);
+    [CallWith=ScriptState] any worldToLocal(any vector);
+    
+    [CallWith=ScriptState] any getWorldPosition(any position);
+    [CallWith=ScriptState] any getWorldQuaternion(any quat);
+    [CallWith=ScriptState] any getWorldScale(any scale);
+    [CallWith=ScriptState] any getWorldDirection(any dir);
+    
+    [CallWith=ScriptState] void lookAt(any target);
+    
+};
+

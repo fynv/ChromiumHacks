@@ -1,0 +1,14 @@
+[
+    Exposed=Window
+] interface Camera : Object3D {    
+    constructor();   
+    
+    [CallWith=ScriptState] readonly attribute any matrixWorldInverse;
+    [CallWith=ScriptState] void getMatrixWorldInverse(any matrix);
+    
+    [CallWith=ScriptState] readonly attribute any projectionMatrix;
+    [CallWith=ScriptState] void getProjectionMatrix(any matrix);
+    
+    [CallWith=ScriptState] readonly attribute any projectionMatrixInverse;
+    [CallWith=ScriptState] void getProjectionMatrixInverse(any matrix);
+};

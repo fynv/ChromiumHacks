@@ -1,0 +1,8 @@
+[
+    Exposed=Window
+] interface GLRenderer {
+    constructor();
+    void dispose();
+    static void s_test();    
+    void render(long width, long height, Camera camera, Scene scene);
+};

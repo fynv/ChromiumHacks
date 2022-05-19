@@ -1,0 +1,11 @@
+[
+    Exposed=Window
+] interface PerspectiveCamera : Camera {    
+    constructor(double fov, double aspect, double z_near, double z_far); 
+    readonly attribute boolean isPerspectiveCamera;
+    attribute double fov;
+    attribute double aspect;
+    attribute double near;
+    attribute double far;
+    void updateProjectionMatrix();
+};

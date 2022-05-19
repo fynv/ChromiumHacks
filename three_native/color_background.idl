@@ -1,0 +1,9 @@
+[
+    Exposed=Window
+] interface ColorBackground : Background {    
+    constructor();
+    [CallWith=ScriptState] readonly attribute any color;  
+    [CallWith=ScriptState] void getColor(any color);
+    [CallWith=ScriptState] void setColor(any color);
+    void setColor(double r, double g, double b);
+};

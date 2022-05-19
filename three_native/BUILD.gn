@@ -1,0 +1,45 @@
+import("//third_party/blink/renderer/modules/modules.gni")
+
+blink_modules_sources("three_native") {
+
+ 
+  sources = [
+    "thirdparty/crc64/crc64.cpp",
+    "internal/GLUtils.cpp",
+    "internal/ModelComponents.cpp",
+    "internal/MeshStandardMaterial.cpp",
+    "internal/GeometryCreator.cpp",
+    "internal/StandardRoutine.cpp",
+    
+    "three_context.cc",
+    "three_context.h",
+    
+    "rgba_image.cc",
+    "rgba_image.h",
+    
+    "image_loader.cc",
+    "image_loader.h",
+    
+    "object_3d.cc",
+    "object_3d.h",    
+    
+    "scene.cc",
+    "scene.h",    
+    
+    "camera.cc",
+    "camera.h",
+    "perspective_camera.cc",
+    "perspective_camera.h",
+    
+    "simple_model.cc",
+    "simple_model.h",
+    
+    "background.h",
+    "background.cc",
+    "color_background.h",
+    "color_background.cc",
+    
+    "gl_renderer.cc",
+    "gl_renderer.h",
+  ]
+}

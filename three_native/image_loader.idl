@@ -1,0 +1,5 @@
+[
+    Exposed=Window
+] interface ImageLoader {
+  static RGBAImage loadMemory([AllowShared] ArrayBuffer buf);
+};

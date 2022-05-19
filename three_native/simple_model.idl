@@ -1,0 +1,20 @@
+[
+    Exposed=Window
+] interface SimpleModel : Object3D {    
+    constructor();
+    void createBox(double width, double height, double depth);
+    void createSphere(double radius, optional long widthSegments = 32, optional long heightSegments = 16);
+	void createPlane(double width, double height);
+	
+	[CallWith=ScriptState] readonly attribute any color;
+    [CallWith=ScriptState] void getColor(any color);
+    [CallWith=ScriptState] void setColor(any color);
+    void setColor(double r, double g, double b);
+    
+    void setColorTexture(RGBAImage image);
+    
+    void setMetalness(double metalness);
+	void setRoughness(double roughness);
+
+	void setToonShading(long mode, double wire_width);
+};

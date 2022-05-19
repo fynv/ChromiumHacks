@@ -1,0 +1,10 @@
+[
+    Exposed=Window
+] interface RGBAImage{    
+    constructor(long width, long height);
+    void dispose();   
+    
+    readonly attribute long width;
+    readonly attribute long height;
+    
+};

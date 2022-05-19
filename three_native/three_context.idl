@@ -1,0 +1,7 @@
+[
+    Exposed=Window
+] interface ThreeContext {    
+    static attribute WebGL2RenderingContext currentContext;
+    static DOMString getLog();
+	static void cleanLog();
+};
