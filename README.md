@@ -1,6 +1,6 @@
 This is an attempt to hack [Three.V8](https://github.com/fynv/Three.V8) into [Chromium](https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md)
 
-The project tries to use the same [ANGLE](https://github.com/google/angle) based canvas context that has been used for WebGL2. OpenGL calls are made against the internal GLESInterface.
+The project tries to use the same [ANGLE](https://github.com/google/angle) based canvas context that has been used for WebGL2. OpenGL calls are made against the internal GLES2Interface.
 
 After the hack, the generated Chromium should be able to run the code inside the "site" folder:
 
